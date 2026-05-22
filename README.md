@@ -1,14 +1,12 @@
 # nba-analytics
-nba analytics system
+nba analytics system using Python, Java, SQL, JavaScript, and HTML.
 
-- Python ETL → PostgreSQL
-- PySpark job for advanced metrics
-- FastAPI backend API
-- React dashboard (teams, players, trends)
-- Simple RAG-style AI assistant over metrics
-- Docker-based local deployment
+- Python ETL: fetches NBA data, computes advanced metrics, loads PostgreSQL
+- Java backend (Spring Boot): REST APIs for team KPIs and player metrics
+- SQL: schema, views, and stored procedures for analytics
+- JS + HTML dashboard: visualizes team net rating and top players
 
-## Quick start
+## Quick start (with Docker)
 
 ```bash
 docker-compose up --build
