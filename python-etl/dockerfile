@@ -1,0 +1,9 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+CMD ["bash", "-c", "python fetch_nba_data.py && python -c 'from transform_metrics import compute_advanced; compute_advanced(\"player_stats.csv\",\"advanced_metrics.csv\")' && python load_to_db.py"]
