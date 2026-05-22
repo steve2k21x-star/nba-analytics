@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NBA Analytics Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>NBA Analytics Dashboard</h1>
+
+  <section>
+    <h2>Team Net Rating</h2>
+    <canvas id="teamChart"></canvas>
+  </section>
+
+  <section>
+    <h2>Top Players by PER</h2>
+    <table id="playersTable">
+      <thead>
+        <tr>
+          <th>Player</th><th>Team</th><th>PER</th><th>TS%</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Simple AI Assistant</h2>
+    <textarea id="question" rows="3" placeholder="Ask about top players..."></textarea>
+    <button id="askBtn">Ask</button>
+    <pre id="answer"></pre>
+  </section>
+
+  <script src="dashboard.js"></script>
+  <script src="ai.js"></script>
+</body>
+</html>
